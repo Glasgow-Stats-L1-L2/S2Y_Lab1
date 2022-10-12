@@ -1,0 +1,47 @@
+---
+title: |
+    | S2Y Lab 1
+    | Exploring relationships and fitting linear models
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+biblio-style: apalike
+link-citations: yes
+---
+
+```{r setup, include = FALSE}
+library(webexercises)
+library(tinytex)
+library(dplyr)
+library(knitr)
+library(ggplot2)
+library(tidyverse)
+library(PASWR)
+
+GRADES <- Grades
+HSWRESTLER <- HSwrestler
+hubble <- read.csv("hubble.csv")
+books  <- read.csv("books.csv")
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r include=FALSE, echo=FALSE}
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+
+# Welcome to S2Y Lab 1
+
+Intended Learning Outcomes:
+
+- produce scatterplots of report quality;
+ 
+- fit linear regression models by using `lm`;
+ 
+- interpret least squares estimates of model parameters;
+
+- calculate least squares estimates of model parameters for simple linear regression.
+
