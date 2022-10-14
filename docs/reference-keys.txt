@@ -3,6 +3,9 @@ fig:grades-plot2
 fig:grades-plot3
 fig:hubble-plot
 welcome-to-s2y-lab-1
+introduction
+optional-rstudio-quickstart-guide
+credit-where-credit-is-due
 example-1-simple-linear-regression-slr
 creating-scatterplots
 fitting-a-linear-model
