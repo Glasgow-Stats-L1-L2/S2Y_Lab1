@@ -5,9 +5,7 @@
 **Source:** Tweedie, F. J., Bank, D. A. and McIntyre, B. (1998) Modelling Publishing History, 1475–1640:
 Change points in the STC.
 
-**Context:** The Short Title Catalogue (STC) is a list of all the books that were published in Scotland, England
-and Ireland between 1475 and 1640. We are interested in finding out if there are any changes in
-the number of books published between 1500 and 1640.
+**Context:** The Short Title Catalogue (STC) is a list of all the books that were published in Scotland, England and Ireland between 1475 and 1640. We are interested in finding out if there are any changes in the number of books published between 1500 and 1640.
 
 **Data: books.csv**
 

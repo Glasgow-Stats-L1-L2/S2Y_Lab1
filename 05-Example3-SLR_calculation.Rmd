@@ -5,7 +5,7 @@ We will now consider how to use RStudio to do more calculations. First of all, o
 Calc <- read.csv("Calc.csv")
 ```
 
-We will now create a number of new vectors by combining the columns named **data1** and **data2** and also by transforming each of these columns using the square-root function, `sqrt`, and the natural logarithm function, `log` (there are many other possibilities).
+We will now create a number of new vectors by combining the columns named `data1` and `data2` and also by transforming each of these columns using the square-root function, `sqrt`, and the natural logarithm function, `log` (there are many other possibilities).
 
 
 Produce and examine the results from the following:
