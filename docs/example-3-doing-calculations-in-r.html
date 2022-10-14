@@ -7,7 +7,7 @@
   <title>6 Example 3: Doing calculations in R | main.knit</title>
   <meta name="description" content="S2Y Lab 1<br />
 Exploring relationships and fitting linear models</div>" />
-  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6 Example 3: Doing calculations in R | main.knit" />
   <meta property="og:type" content="book" />
@@ -91,7 +91,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -104,7 +104,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -133,7 +133,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome to S2Y Lab 1</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome to S2Y Lab 1</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#optional-rstudio-quickstart-guide"><i class="fa fa-check"></i><b>1.2</b> Optional: RStudio Quickstart Guide</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#credit-where-credit-is-due"><i class="fa fa-check"></i><b>1.3</b> Credit where credit is due</a></li>
+</ul></li>
 <li class="chapter" data-level="2" data-path="example-1-simple-linear-regression-slr.html"><a href="example-1-simple-linear-regression-slr.html"><i class="fa fa-check"></i><b>2</b> Example 1: Simple linear regression (SLR)</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="example-1-simple-linear-regression-slr.html"><a href="example-1-simple-linear-regression-slr.html#creating-scatterplots"><i class="fa fa-check"></i><b>2.1</b> Creating scatterplots</a></li>
@@ -176,7 +181,7 @@ Exploring relationships and fitting linear models</div></a>
 <h1><span class="header-section-number">6</span> Example 3: Doing calculations in R<a href="example-3-doing-calculations-in-r.html#example-3-doing-calculations-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>We will now consider how to use RStudio to do more calculations. First of all, open a data set called , which contains some 'toy' data, by using the command:</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="example-3-doing-calculations-in-r.html#cb23-1" aria-hidden="true" tabindex="-1"></a>Calc <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Calc.csv&quot;</span>)</span></code></pre></div>
-<p>We will now create a number of new vectors by combining the columns named <strong>data1</strong> and <strong>data2</strong> and also by transforming each of these columns using the square-root function, <code>sqrt</code>, and the natural logarithm function, <code>log</code> (there are many other possibilities).</p>
+<p>We will now create a number of new vectors by combining the columns named <code>data1</code> and <code>data2</code> and also by transforming each of these columns using the square-root function, <code>sqrt</code>, and the natural logarithm function, <code>log</code> (there are many other possibilities).</p>
 <p>Produce and examine the results from the following:</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="example-3-doing-calculations-in-r.html#cb24-1" aria-hidden="true" tabindex="-1"></a>Calc<span class="sc">$</span>data1 <span class="sc">-</span> Calc<span class="sc">$</span>data2                <span class="co"># difference </span></span>
 <span id="cb24-2"><a href="example-3-doing-calculations-in-r.html#cb24-2" aria-hidden="true" tabindex="-1"></a>Calc<span class="sc">$</span>data1 <span class="sc">/</span> Calc<span class="sc">$</span>data2                <span class="co"># division</span></span>
@@ -435,7 +440,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

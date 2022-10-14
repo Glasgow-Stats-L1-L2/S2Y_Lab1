@@ -7,7 +7,7 @@
   <title>S2Y Lab 1 Exploring relationships and fitting linear models | main.knit</title>
   <meta name="description" content="S2Y Lab 1<br />
 Exploring relationships and fitting linear models</div>" />
-  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="S2Y Lab 1 Exploring relationships and fitting linear models | main.knit" />
   <meta property="og:type" content="book" />
@@ -91,7 +91,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -104,7 +104,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -133,7 +133,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome to S2Y Lab 1</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome to S2Y Lab 1</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#optional-rstudio-quickstart-guide"><i class="fa fa-check"></i><b>1.2</b> Optional: RStudio Quickstart Guide</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#credit-where-credit-is-due"><i class="fa fa-check"></i><b>1.3</b> Credit where credit is due</a></li>
+</ul></li>
 <li class="chapter" data-level="2" data-path="example-1-simple-linear-regression-slr.html"><a href="example-1-simple-linear-regression-slr.html"><i class="fa fa-check"></i><b>2</b> Example 1: Simple linear regression (SLR)</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="example-1-simple-linear-regression-slr.html"><a href="example-1-simple-linear-regression-slr.html#creating-scatterplots"><i class="fa fa-check"></i><b>2.1</b> Creating scatterplots</a></li>
@@ -185,7 +190,41 @@ Exploring relationships and fitting linear models</div></h1>
 <li><p>interpret least squares estimates of model parameters;</p></li>
 <li><p>calculate least squares estimates of model parameters for simple linear regression.</p></li>
 </ul>
+<div id="introduction" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the lectures we have examined relationships between variables using scatterplots. We have considered how to fit a linear model, through estimating the parameters such as <span class="math inline">\(\beta\)</span> in the linear model <span class="math inline">\(Y_i = \alpha + \beta x_i +\epsilon _i\)</span>, by the method of least squares or maximum likelihood. In today’s lab we shall use RStudio to explore and fit relationships using a variety of linear model examples.</p>
+<p>We assume that the data take the form <span class="math inline">\((y_i, x_i)\)</span> for <span class="math inline">\(i = 1, . . . , n\)</span> and we will model the following relationship <span class="math inline">\(Y_i = f(x_i) + \epsilon_i\)</span>.</p>
+</div>
+<div id="optional-rstudio-quickstart-guide" class="section level2 hasAnchor" number="1.2" style="color: dimgrey;">
+<h2><span class="header-section-number">1.2</span> Optional: RStudio Quickstart Guide<a href="index.html#optional-rstudio-quickstart-guide" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This course assumes basic knowledge of <code>R</code> and RStudio. The starting point is opening RStudio by going to:</p>
+<center>
+Maths &amp; Stats Apps &gt; RStudio
+</center>
+<p>To access the data in this course, it is best to open and save a new script file to work in within RStudio and to set the working directory. This will enable you to save your R commands and comments on your work as you go through each of the examples.</p>
+<p>To open a new script go to:</p>
+<center>
+<code>File &gt; New &gt; R script</code>
+</center>
+<p>This will open a new screen for you to type into.</p>
+<p>Go to:</p>
+<center>
+<code>File &gt; Save as</code>
+</center>
+<p>and save the script file into your home directory. Now, start by setting the working directory in RStudio to the directory in which you have stored both the data and <code>R</code> script. One way of doing this is to go to:</p>
+<center>
+<code>Session &gt; Set Working Directory &gt; To Source File Location</code>
+</center>
+<p>This will point RStudio towards this directory to enable us to use files within that directory.</p>
+<p>It is useful to annotate your script file using comments so that you know what has been done when you look at it in the future. Comments can be added to a script file by starting the line with a # symbol.</p>
+</div>
+<div id="credit-where-credit-is-due" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Credit where credit is due<a href="index.html#credit-where-credit-is-due" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The labs in S2Y incorporate and adapt materials from:</p>
+<p>Ugarte, M. D., Militino, A. F., &amp; Arnholt, A. T. (2008). <a href="https://ebookcentral.proquest.com/lib/gla/detail.action?docID=5338596">Probability and Statistics with R</a>. CRC press.</p>
+<p>The materials were converted into interactive labs using <code>Bookdown</code> and <code>webexercises</code> in Summer 2022 by four summer project students, Jennifer James, Megan Ruffle, Naphon Olley, William Ryan.</p>
 
+</div>
 </div>
 <script>
 
@@ -423,7 +462,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
